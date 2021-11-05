@@ -1,4 +1,4 @@
-# Deploying Machine Learning in R : from package building to REST services.
+# Deploying ML models in R : from package building to REST services.
 
 ## Pre-requisitos
 
