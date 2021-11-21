@@ -7,7 +7,7 @@
 ## DOCKER
 * ¿Que es Docker? :  https://www.edureka.co/blog/what-is-docker-container
 * Instalación :  https://docs.docker.com/engine/install/ 
-  - Comandos básicos: https://www.edureka.co/blog/docker-commands/
+* Comandos básicos: https://www.edureka.co/blog/docker-commands/
 
 ## R-PACKAGES
 * https://r-pkgs.org/
