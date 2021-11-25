@@ -18,3 +18,9 @@ opencpu/ubuntu-20.04        latest    7ff3d6280a0a   12 days ago      1.98GB
 ```{bash}
 ./runDocker 7ff3d6280a0a
 ```
+
+
+```{bash}
+./toDocker 7ff3d6280a0a
+```
+
