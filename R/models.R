@@ -29,6 +29,10 @@ if (F){
 
 }
 
+
+#' Construir un JSON
+#'
+#' @param df A dataframe.
 out2JSON <- function(df){
   jsonlite::toJSON(df)
 }
@@ -38,6 +42,9 @@ loadModel <- function(model.name) {
   return(readRDS(f))
 }
 
+#' Devuelve el resultado de una regresion lineal simple ajustada al dataset "BOSTON" del paquete MASS ()
+#'
+#' @param df A dataframe.
 getPred.lm.s <- function(lstat){
   lm.s.fit <- loadModel(model.name = "lm_s-fit.RDS")
   out <- predict(lm.s.fit,
