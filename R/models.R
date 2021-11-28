@@ -50,7 +50,7 @@ getPred.lm.s <- function(lstat){
   out <- predict(lm.s.fit,
                  data.frame("lstat" = lstat),
                  interval = "confidence")
-  return(out2JSON(out))
+  return(out)
 }
 
 getPred.lm.m <- function(lstat, age){
