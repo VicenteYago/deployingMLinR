@@ -51,7 +51,7 @@ sudo a2ensite opencpu
 sudo apachectl restart
 
 # LIBRERIAS TOP
-RUN R -e "install.packages(c('fable', 'tidymodels', 'randomForest'), dependencies = T)"
+RUN R -e "install.packages(c('fable', 'tidymodels', 'randomForest', 'tidypredict'), dependencies = T)"
 
 # KERAS + TENSORFLOW ---> https://tensorflow.rstudio.com/installation/
 RUN R -e "install.packages('tensorflow')"
