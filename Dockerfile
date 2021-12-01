@@ -1,13 +1,15 @@
 FROM rocker/tidyverse
 
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
-RUN sudo apt-get install software-properties-common
+RUN sudo apt-get update 
+RUN sudo apt-get upgrade -y
+RUN sudo apt-get install software-properties-common -y
 RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
-sudo apt-get update
-sudo apt-get install opencpu-server
+RUN sudo apt-get update
+RUN sudo apt-get install opencpu-server
 
-sudo a2ensite opencpu
-sudo apachectl restart
+RUN sudo a2ensite opencpu
+RUN sudo apachectl restart
 
 # LIBRERIAS TOP
 RUN R -e "install.packages(c('tidymodels', 'ranger', 'tidypredict'), dependencies = T)"
