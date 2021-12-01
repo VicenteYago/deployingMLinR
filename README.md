@@ -39,11 +39,24 @@ Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile
 * ¿Que hay dentro del Dockerfile?
 
 ```{Dockerfile}
-FROM opencpu/ubuntu-20.04
+FROM rocker/tidyverse
 
-RUN sudo apt install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
-RUN R -e "install.packages(c('xml2', 'devtools'), dependencies = T)"
+# OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
+RUN sudo apt-get install software-properties-common
+RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
+sudo apt-get update
+sudo apt-get install opencpu-server
+
+sudo a2ensite opencpu
+sudo apachectl restart
+
+# LIBRERIAS TOP
+RUN R -e "install.packages(c('fable'), dependencies = T)"
+
+# NUESTRO PAQUETE 
 RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'dev')"
+
+
 ```
 
 Construimos la imagen: 
@@ -106,6 +119,8 @@ curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.m/json?auto_unbox=tru
   [21.1962, 20.3549, 22.0375]
 ]
 ```
+
+
 
 
 
