@@ -51,7 +51,7 @@ sudo a2ensite opencpu
 sudo apachectl restart
 
 # LIBRERIAS TOP
-RUN R -e "install.packages(c('fable'), dependencies = T)"
+RUN R -e "install.packages(c('fable', 'tidymodels'), dependencies = T)"
 
 # NUESTRO PAQUETE 
 RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'dev')"
