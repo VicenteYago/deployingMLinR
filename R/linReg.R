@@ -5,19 +5,6 @@
 #   Test Package:              'Ctrl + Shift + T'
 
 
-if (F){
-#----NOT RUN
-  library(ISLR)
-  library(MASS)
-  attach(Boston)
-
-  # multiple linear reg
-   (lm.fit = lm(medv ~ lstat + age, data = Boston))
-   saveRDS(lm.boston, file = "./inst/extdata/lm-boston.RDS")
-}
-
-
-
 #' Construir un JSON
 #'
 #' @param df A dataframe.
