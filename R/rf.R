@@ -111,7 +111,7 @@ dummyML::getPred.ranger.pima(pregnant = 2,
                              insulin  = 102,
                              mass     = 28.2,
                              pedigree = 0.67,
-                             age      = 23 )
+                             age      = 23)
 
   }
 
