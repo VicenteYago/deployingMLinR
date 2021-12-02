@@ -1,4 +1,6 @@
-FROM rocker/tidyverse:4.1.0
+FROM rocker/tidyverse:latest
+
+RUN echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' >> ${R_HOME}/etc/Rprofile.site
 
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
 ENV DEBIAN_FRONTEND="noninteractive"
@@ -11,11 +13,15 @@ RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
 RUN sudo apt-get update
 RUN sudo apt-get install -y opencpu-server
 
+RUN R -e "options(repos = 'https://cran.rstudio.com')"
+
 RUN sudo a2ensite opencpu
 RUN sudo apachectl restart
 
 # LIBRERIAS ML
-RUN R -e "install.packages(c('tidymodels', 'ranger', 'tidypredict'), dependencies = T)"
+RUN R -e "install.packages(c('tidymodels'), dependencies = T)"
+RUN R -e "install.packages(c('ranger'), dependencies = T)"
+RUN R -e "install.packages(c('tidypredict'), dependencies = T)"
 
 # NUESTRO PAQUETE
 RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'dev')"
