@@ -1,4 +1,4 @@
-# deployingMLinR : Pâquete dummyML
+# deployingMLinR : Paquete dummyML
 
 Bienvenidos a la rama **r-package** ! Aqui se encuentra el paquete dummyML que usaremos en el taller.
 
@@ -7,7 +7,10 @@ Bienvenidos a la rama **r-package** ! Aqui se encuentra el paquete dummyML que u
 Abrimos la terminal (Ctrl + Alt + T) y navegamos hasta la carpeta en la que vamos a clonar el proyecto, por ejemplo la carpeta Documents/
 
 ```{bash}
-cd Documents/
+cd ~/Documents
+```
+Y clonaomos el repositorio:
+```{bash}
 git clone git@github.com:VicenteYago/deployingMLinR.git
 ```
 Una vez descargado, nos situamos dentro del proyecto: 
@@ -16,7 +19,7 @@ Una vez descargado, nos situamos dentro del proyecto:
 cd deployingMLinR
 ```
 
-y echamos un vistazo a los ficheros: 
+y echamos un vistazo a los ficheros con *ls -l* : 
 
 ```{bash}
 total 44
