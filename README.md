@@ -1,6 +1,16 @@
 # Depliegue de ML con R: creacion de paquetes y API
 
-Hola!, en este repositorio para UMUR 
+
+## Introducción
+
+Hola!, con este repositorio aprenderemos a crear paquetes R para nuestros modelos y a desplegarlos con una API a través de openCPU.
+
+El repositorio consta de 3 ramas: 
+* **main** : rama principal, en la que estas ahora mismo, aqui se reunen los principales recursos para esta charla.
+* **r-package**: aqui esta todoo lo necesario para crear un paquete que unfica varios modelos preentrenados listos para ser desplegados con opencpu (explicadcion en el readme.md)
+* **models**: aqui se encuentran los scripts con los que se han entrenadlos los modelos de la rama r-package. En una aplicacion real seria un notebook bien desarrollado-
+
+
 
 
 ## R packages : 
