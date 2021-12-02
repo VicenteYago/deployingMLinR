@@ -1,8 +1,12 @@
 FROM rocker/tidyverse:latest
 
+
+#    R Package Manager fix  https://github.com/rocker-org/rocker-versioned2/issues/301#issuecomment-984679756
 RUN echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' >> ${R_HOME}/etc/Rprofile.site
 
+
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
+#    apache mail server fix  https://stackoverflow.com/questions/40890011/ubuntu-dockerfile-mailutils-install
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update && apt-get install -y mailutils # https://stackoverflow.com/questions/40890011/ubuntu-dockerfile-mailutils-install
 
@@ -12,11 +16,6 @@ RUN sudo apt-get install software-properties-common -y
 RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
 RUN sudo apt-get update
 RUN sudo apt-get install -y opencpu-server
-
-RUN R -e "options(repos = 'https://cran.rstudio.com')"
-
-RUN sudo a2ensite opencpu
-RUN sudo apachectl restart
 
 # LIBRERIAS ML
 RUN R -e "install.packages(c('tidymodels'), dependencies = T)"
