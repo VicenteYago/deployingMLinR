@@ -1,6 +1,9 @@
 FROM rocker/tidyverse
 
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
+ENV DEBIAN_FRONTEND="noninteractive"
+RUN apt-get update && apt-get install -y mailutils
+
 RUN sudo apt-get update 
 RUN sudo apt-get upgrade -y
 RUN sudo apt-get install software-properties-common -y
