@@ -39,30 +39,9 @@ Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile
 
 * ¿Que hay dentro del Dockerfile?
 
-```{Dockerfile}
-FROM rocker/tidyverse
-
-# OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
-RUN sudo apt-get install software-properties-common
-RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
-sudo apt-get update
-sudo apt-get install opencpu-server
-
-sudo a2ensite opencpu
-sudo apachectl restart
-
-# LIBRERIAS TOP
-RUN R -e "install.packages(c('tidymodels', 'ranger', 'tidypredict'), dependencies = T)"
-
-#KERAS + TENSORFLOW ---> https://tensorflow.rstudio.com/installation/
-#RUN R -e "install.packages('tensorflow')"
-#RUN R -e "tensorflow::install_tensorflow()"
-#RUN R -e "install.packages('keras')"
+  [Dockerfile](Dockerfile)
 
 
-# NUESTRO PAQUETE 
-RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'dev')"
-```
 
 Construimos la imagen: 
 ```{bash}
@@ -80,7 +59,8 @@ dummy-ml       latest    <image_id>    12 days ago       1.98GB
 Y ejecutamos el contendor: 
 
 ```{bash}
-./runDocker <image_id>
+./runDocker <image_id> <port>
+./runDocker <image_id> 85
 ```
 
 Verificamos que esta corriendo: 
@@ -90,7 +70,7 @@ CONTAINER ID       IMAGE          COMMAND                CREATED         STATUS 
 <container_id>  <image_id>   "/bin/sh -c 'service…"   5 minutes ago   Up 5 minutes   443/tcp, 8004/tcp, 0.0.0.0:85->80/tcp, :::85->80/tcp   interesting_roentgen
 ```
 
-Incluso podemos echar un vistazo dentro: 
+Nos metemos dentro del contendor: 
 ```{bash}
 ./toDocker <container_id>
 ```
@@ -123,7 +103,11 @@ curl http://localhost:85/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 
 
 ```{json}
-
+[
+  {
+    ".pred_class": "neg"
+  }
+]
 ```
 
 
