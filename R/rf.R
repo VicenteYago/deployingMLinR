@@ -79,7 +79,11 @@ if (F){
 }
 
 
-
+# Some useful keyboard shortcuts for package authoring:
+#
+#   Install Package:           'Ctrl + Shift + B'
+#   Check Package:             'Ctrl + Shift + E'
+#   Test Package:              'Ctrl + Shift + T'
 
 getPred.ranger.pima <- function(pregnant, glucose, pressure, triceps, insulin, mass, pedigree, age) {
 
@@ -97,8 +101,6 @@ getPred.ranger.pima <- function(pregnant, glucose, pressure, triceps, insulin, m
   out <- predict(fit, new_woman)
   return(out)
 }
-
-
 
 
 if(F){
