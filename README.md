@@ -38,16 +38,25 @@ Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile
 
 ## CONSTRUIR IMAGEN DOCKER Y DESPLEGAR SERVICIOS
 
-* ¿Que hay dentro del Dockerfile?
+¿Que hay dentro del Dockerfile?
 
   [Dockerfile](Dockerfile)
 
 
 
-Construimos la imagen: 
-```{bash}
-./buildDocker.sh 
-```
+Construimos la imagen:
+
+* **Atencion!!: El siguiente comando puede tardar bastante en compilar en funcion de la capaciad de vuestro pc**
+
+  ```{bash}
+  ./buildDocker.sh 
+  ```
+* **Por eso he subido la imagen ya compilada a [dockerhub](https://hub.docker.com/r/vyago/dummy-ml-umur)
+ para que solo tengais que descargarla:**
+    ```{bash}
+    docker pull vyago/dummy-ml-umur
+    ```
+
 
 Verificamos que  la imagen se ha creado en nuestro pc : 
 ```{bash}
@@ -75,7 +84,7 @@ Nos metemos dentro del contendor:
 ```{bash}
 ./toDocker <container_id>
 ```
-Y damos de alta el servicio opencpu (https://opencpu.github.io/server-manual/opencpu-server.pdf) : 
+Y  [activamos](https://opencpu.github.io/server-manual/opencpu-server.pdf) el servicio opencpu   : 
 
 ```{bash}
 sudo a2ensite opencpu
