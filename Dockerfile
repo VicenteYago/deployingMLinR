@@ -6,7 +6,7 @@ RUN sudo apt-get upgrade -y
 RUN sudo apt-get install software-properties-common -y
 RUN sudo add-apt-repository ppa:opencpu/opencpu-2.2 -y
 RUN sudo apt-get update
-RUN sudo apt-get install opencpu-server
+RUN sudo apt-get install -y opencpu-server
 
 RUN sudo a2ensite opencpu
 RUN sudo apachectl restart
