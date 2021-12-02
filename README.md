@@ -98,21 +98,10 @@ Podemos regresar a nuestro pc con Ctrl + d
 
 ## EJECUTAMOS LOS MODELOS DE FORMA REMOTA
 
-```{bash}
-curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.s/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15]}'
-```
-
-```{json}
-[
-  [29.8036, 29.0074, 30.5998],
-  [25.0533, 24.4741, 25.6326],
-  [20.3031, 19.7316, 20.8746]
-]
-```
 
 
 ```{bash}
-curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.m/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
+curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
 ```
 
 
