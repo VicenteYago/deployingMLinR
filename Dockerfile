@@ -2,7 +2,7 @@ FROM rocker/tidyverse
 
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
 ENV DEBIAN_FRONTEND="noninteractive"
-RUN apt-get update && apt-get install -y mailutils
+RUN apt-get update && apt-get install -y mailutils # https://stackoverflow.com/questions/40890011/ubuntu-dockerfile-mailutils-install 
 
 RUN sudo apt-get update 
 RUN sudo apt-get upgrade -y
