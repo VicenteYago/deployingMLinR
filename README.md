@@ -131,9 +131,3 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 ```
 *Estos comandos tienen truco, en realidad no es de forma remota pues estamos utilizando nuestra propia maquina (localhost), si hubiesemos desplegado los modelos en un servidor el comando seria igual pero sustituyendo localhost por la ip del mismo*
 
-# Pagina de Test Opencpu
-
-http://localhost:80/ocpu/test/
-
-
-
