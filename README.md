@@ -1,5 +1,6 @@
-# deployingMLinR
-Deploying ML models in R: from package building to REST services.
+# deployingMLinR : Pâquete dummyML
+
+Bienvenidos a la rama **r-package** ! Aqui se encuentra el paquete dummyML que usaremos en el taller.
 
 ## DESCARGAR EL PROYECTO EN NUESTRO PC
 
@@ -35,7 +36,7 @@ drwxrwxr-x 2 vyago vyago 4096 dic  2 14:27 R
 Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile** y los scripts .sh
 
 
-## CONSTRUIR IMAGEN DOCKER
+## CONSTRUIR IMAGEN DOCKER Y DESPLEGAR SERVICIOS
 
 * ¿Que hay dentro del Dockerfile?
 
@@ -74,18 +75,24 @@ Nos metemos dentro del contendor:
 ```{bash}
 ./toDocker <container_id>
 ```
-Podemos regresar a nuestro pc con Ctrl + d
+Y damos de alta el servicio opencpu (https://opencpu.github.io/server-manual/opencpu-server.pdf) : 
+
+```{bash}
+sudo a2ensite opencpu
+sudo apachectl restart
+```
+
+
+Podemos regresar a nuestra máquina con Ctrl + d
 
 
 ## EJECUTAMOS LOS MODELOS DE FORMA REMOTA
-
 
 ### Regresion Lineal Multiple con Boston
 
 ```{bash}
 curl http://localhost:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
 ```
-
 
 ```{json}
 [
@@ -108,8 +115,9 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
     ".pred_class": "neg"
   }
 ]
-```
 
+```
+*Estos comandos tienen truco, en realidad no es de forma remota pues estamos utilizando nuestra propia maquina (localhost), si hubiesemos desplegado los modelos en un servidor el comando seria igual pero sustituyendo localhost por la ip del mismo*
 
 # Pagina de Test Opencpu
 
