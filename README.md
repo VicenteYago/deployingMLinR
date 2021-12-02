@@ -111,7 +111,9 @@ curl http://localhost:85/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 ```
 
 
+# Pagina de Test Opencpu
 
+http://localhost:85/ocpu/test/
 
 
 
