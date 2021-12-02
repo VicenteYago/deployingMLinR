@@ -1,3 +1,3 @@
 #! /bin/bash
 
-sudo docker run -d -p 85:80 $1
+sudo docker run -d -p $2:80 $1
