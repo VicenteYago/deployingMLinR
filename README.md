@@ -18,20 +18,21 @@ cd deployingMLinR
 y echamos un vistazo a los ficheros: 
 
 ```{bash}
--rwxrw-r-- 1 vyago vyago   46 nov 25 21:08 buildDocker.sh
+total 44
+-rwxrwxr-x 1 vyago vyago   57 dic  2 14:27 buildDocker.sh
 -rw-rw-r-- 1 vyago vyago  391 nov 28 00:15 DESCRIPTION
--rw-rw-r-- 1 vyago vyago  277 nov 28 00:33 Dockerfile
--rw-rw-r-- 1 vyago vyago  356 nov 28 00:53 dummyML.Rproj
-drwxrwxr-x 3 vyago vyago 4096 nov 21 16:44 inst
-drwxrwxr-x 2 vyago vyago 4096 nov 28 00:15 man
--rw-rw-r-- 1 vyago vyago   31 nov 21 16:31 NAMESPACE
-drwxrwxr-x 2 vyago vyago 4096 nov 28 00:20 R
--rw-rw-r-- 1 vyago vyago  806 nov 28 00:55 README.md
+-rw-rw-r-- 1 vyago vyago 1231 dic  2 14:27 Dockerfile
+-rw-rw-r-- 1 vyago vyago  356 dic  2 15:24 dummyML.Rproj
+drwxrwxr-x 3 vyago vyago 4096 dic  2 14:27 inst
+drwxrwxr-x 2 vyago vyago 4096 dic  2 15:13 man
+-rw-rw-r-- 1 vyago vyago  115 dic  2 15:13 NAMESPACE
+drwxrwxr-x 2 vyago vyago 4096 dic  2 14:27 R
+-rw-rw-r-- 1 vyago vyago 3552 dic  2 14:27 README.md
 -rwxrw-r-- 1 vyago vyago   45 nov 25 21:30 runDocker.sh
 -rwxrw-r-- 1 vyago vyago   51 nov 25 21:35 toDocker.sh
 ```
 
-Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile**.
+Parece el contenido de un paquete R normal, a excepcion del fichero **Dockerfile** y los scripts .sh
 
 
 ## CONSTRUIR IMAGEN DOCKER
