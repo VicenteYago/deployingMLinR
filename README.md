@@ -1,4 +1,6 @@
-# UMUR
+# Depliegue de ML con R: creacion de paquetes y API
+
+Hola!, en este repositorio para UMUR 
 
 
 ## R packages : 
