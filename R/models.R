@@ -33,9 +33,9 @@ if (F){
 #' Construir un JSON
 #'
 #' @param df A dataframe.
-out2JSON <- function(df){
-  jsonlite::toJSON(df)
-}
+#out2JSON <- function(df){
+#  jsonlite::toJSON(df)
+#}
 
 loadModel <- function(model.name) {
   f = system.file("extdata", model.name, package = "dummyML")
