@@ -42,7 +42,7 @@ if (F){
 getPred.lm.boston <- function(lstat, age){
 
   lm.fit <- loadModel(model.name = "lm-boston.RDS")
-  out <- predict(lm.m.fit,
+  out <- predict(lm.fit,
                  data.frame("lstat" = lstat,
                             "age"   = age),
                              interval = "confidence")
