@@ -99,6 +99,7 @@ Podemos regresar a nuestro pc con Ctrl + d
 ## EJECUTAMOS LOS MODELOS DE FORMA REMOTA
 
 
+### Regresion Lineal Multiple con Boston
 
 ```{bash}
 curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
@@ -111,6 +112,17 @@ curl http://localhost:85/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbo
   [26.0111, 25.1311, 26.891],
   [21.1962, 20.3549, 22.0375]
 ]
+```
+
+### Clasificación con Random Forest en Dataset Indios Pina.
+
+```{bash}
+curl http://localhost:85/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_unbox=true -H "Content-Type: application/json" -d '{"pregnant":[2], "glucose":[95], "pressure":[70], "triceps":[31], "insulin":[102], "mass":[28.2], "pedigree":[0.67], "age":[23]}'
+```
+
+
+```{json}
+
 ```
 
 
