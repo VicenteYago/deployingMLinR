@@ -60,7 +60,7 @@ Y ejecutamos el contendor:
 
 ```{bash}
 ./runDocker <image_id> <port>
-./runDocker <image_id> 85
+./runDocker <image_id> 80
 ```
 
 Verificamos que esta corriendo: 
