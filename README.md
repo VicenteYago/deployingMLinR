@@ -6,7 +6,7 @@
 Hola!, con este repositorio aprenderemos a crear paquetes R para nuestros modelos y a desplegarlos con una API a través de openCPU.
 
 El repositorio consta de 3 ramas: 
-* **main** : rama principal, en la que estas ahora mismo, aqui se reunen los principales recursos para esta charla.
+* **main** : rama principal, en la que estas ahora mismo, aqui se reunen los principales recursos para este taller.
 * **[r-package](https://github.com/VicenteYago/deployingMLinR/tree/r-package)**: aqui esta todo lo necesario para crear un paquete que unifica varios modelos preentrenados listos para ser desplegados con opencpu (explicación en el readme.md)
 * **[models](https://github.com/VicenteYago/deployingMLinR/tree/models)**: aqui se encuentran los scripts con los que se han entrenadlos los modelos de la rama r-package. En una aplicacion real seria un notebook bien desarrollado.
 
