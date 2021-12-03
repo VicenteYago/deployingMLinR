@@ -147,11 +147,11 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 **Podeis probar este comando para obtener el resultado ejecutado desde mi pc:**
 
 ```{bash}
-curl http://<IP>:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
+curl http://172.22.10.129:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
 ```
 
 ```{bash}
-curl http://<IP>:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_unbox=true -H "Content-Type: application/json" -d '{"pregnant":[2], "glucose":[95], "pressure":[70], "triceps":[31], "insulin":[102], "mass":[28.2], "pedigree":[0.67], "age":[23]}'
+curl http://172.22.10.129:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_unbox=true -H "Content-Type: application/json" -d '{"pregnant":[2], "glucose":[95], "pressure":[70], "triceps":[31], "insulin":[102], "mass":[28.2], "pedigree":[0.67], "age":[23]}'
 ```
 
 
