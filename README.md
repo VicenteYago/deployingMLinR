@@ -124,7 +124,6 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbo
     "upr": 22.0375
   }
 ]
-
 ```
 
 ### Clasificación con Random Forest en Dataset Indios Pina.
@@ -142,8 +141,18 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 ]
 
 ```
+
 *Estos comandos tienen truco, en realidad no es de forma remota pues estamos utilizando nuestra propia maquina (localhost), si hubiesemos desplegado los modelos en un servidor el comando seria igual pero sustituyendo localhost por la ip del mismo*
 
+**Podeis probar este comando para obtener el resultado ejecutado desde mi pc:**
+
+```{bash}
+curl http://<IP>:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
+```
+
+```{bash}
+curl http://<IP>:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_unbox=true -H "Content-Type: application/json" -d '{"pregnant":[2], "glucose":[95], "pressure":[70], "triceps":[31], "insulin":[102], "mass":[28.2], "pedigree":[0.67], "age":[23]}'
+```
 
 
 
