@@ -108,9 +108,21 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbo
 
 ```{json}
 [
-  [30.826, 29.7627, 31.8893],
-  [26.0111, 25.1311, 26.891],
-  [21.1962, 20.3549, 22.0375]
+  {
+    "fit": 30.826,
+    "lwr": 29.7627,
+    "upr": 31.8893
+  },
+  {
+    "fit": 26.0111,
+    "lwr": 25.1311,
+    "upr": 26.891
+  },
+  {
+    "fit": 21.1962,
+    "lwr": 20.3549,
+    "upr": 22.0375
+  }
 ]
 ```
 
@@ -129,8 +141,18 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 ]
 
 ```
+
 *Estos comandos tienen truco, en realidad no es de forma remota pues estamos utilizando nuestra propia maquina (localhost), si hubiesemos desplegado los modelos en un servidor el comando seria igual pero sustituyendo localhost por la ip del mismo*
 
+**Podeis probar este comando para obtener el resultado ejecutado desde mi pc:**
+
+```{bash}
+curl http://<IP>:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbox=true -H "Content-Type: application/json" -d '{"lstat":[5,10,15], "age":[80,90,100]}'
+```
+
+```{bash}
+curl http://<IP>:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_unbox=true -H "Content-Type: application/json" -d '{"pregnant":[2], "glucose":[95], "pressure":[70], "triceps":[31], "insulin":[102], "mass":[28.2], "pedigree":[0.67], "age":[23]}'
+```
 
 
 
