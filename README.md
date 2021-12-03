@@ -108,10 +108,23 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.lm.boston/json?auto_unbo
 
 ```{json}
 [
-  [30.826, 29.7627, 31.8893],
-  [26.0111, 25.1311, 26.891],
-  [21.1962, 20.3549, 22.0375]
+  {
+    "fit": 30.826,
+    "lwr": 29.7627,
+    "upr": 31.8893
+  },
+  {
+    "fit": 26.0111,
+    "lwr": 25.1311,
+    "upr": 26.891
+  },
+  {
+    "fit": 21.1962,
+    "lwr": 20.3549,
+    "upr": 22.0375
+  }
 ]
+
 ```
 
 ### Clasificación con Random Forest en Dataset Indios Pina.
