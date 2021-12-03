@@ -2,18 +2,28 @@
 % Please edit documentation in R/linReg.R
 \name{getPred.lm.boston}
 \alias{getPred.lm.boston}
-\title{Construir un JSON}
+\title{Regresion lineal Boston}
 \usage{
 getPred.lm.boston(lstat, age)
 }
 \arguments{
-\item{lstat}{....}
+\item{lstat}{Numeric vector, lower status of the population (percent).}
 
-\item{df}{A dataframe.
-Devuelve el resultado de una regresion lineal simple ajustada al dataset "BOSTON" del paquete MASS ()}
-
-\item{agre}{....}
+\item{age}{Numeric vector, proportion of owner-occupied units built prior to 1940.}
+}
+\value{
+A dataframe, first row is the fit, second is lwr, third is upr.
 }
 \description{
-Construir un JSON
+Devuelve el resultado de una regresion lineal multiple ajustada al dataset \code{\link[MASS]{Boston}}.
+}
+\examples{
+getPred.lm.boston(lstat = c(5,10,15), age = c(80, 90, 100))
+}
+\seealso{
+\code{\link{getPred.ranger.pima}}
+}
+\author{
+Yago
+\email{josevicente.yago@um.es}
 }

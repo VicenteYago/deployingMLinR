@@ -1,22 +1,16 @@
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
 
-
-#' Construir un JSON
+#' Regresion lineal Boston
 #'
-#' @param df A dataframe.
-#out2JSON <- function(df){
-#  jsonlite::toJSON(df)
-#}
-
-
-#' Devuelve el resultado de una regresion lineal simple ajustada al dataset "BOSTON" del paquete MASS ()
+#' Devuelve el resultado de una regresion lineal multiple ajustada al dataset \code{\link[MASS]{Boston}}.
 #'
-#' @param lstat ....
-#' @param agre ....
+#' @param lstat Numeric vector, lower status of the population (percent).
+#' @param age Numeric vector, proportion of owner-occupied units built prior to 1940.
+#' @return A dataframe, first row is the fit, second is lwr, third is upr.
+#' @examples
+#' getPred.lm.boston(lstat = c(5,10,15), age = c(80, 90, 100))
+#' @seealso \code{\link{getPred.ranger.pima}}
+#' @author Yago
+#' \email{josevicente.yago@@um.es}
 getPred.lm.boston <- function(lstat, age){
 
   lm.fit <- loadModel(model.name = "lm-boston.RDS")
@@ -24,14 +18,9 @@ getPred.lm.boston <- function(lstat, age){
                  data.frame("lstat" = lstat,
                             "age"   = age),
                              interval = "confidence")
-  return(out)
+  return(data.frame(out))
 }
 
-
-if (F) {
-  # dummyML::getPred.lm.s(lstat = c(5,10,15))
-  dummyML::getPred.lm.boston(lstat = c(5,10,15), age = c(80, 90, 100))
-}
 
 
 
