@@ -23,7 +23,7 @@ RUN R -e "install.packages(c('ranger'), dependencies = T)"
 RUN R -e "install.packages(c('tidypredict'), dependencies = T)"
 
 # NUESTRO PAQUETE
-RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'dev')"
+RUN R -e "devtools::install_github('https://github.com/VicenteYago/deployingMLinR', ref = 'r-package')"
 
 #KERAS + TENSORFLOW ---> https://tensorflow.rstudio.com/installation/
 #RUN R -e "install.packages('tensorflow')"
