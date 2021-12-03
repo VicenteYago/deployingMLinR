@@ -131,3 +131,35 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 ```
 *Estos comandos tienen truco, en realidad no es de forma remota pues estamos utilizando nuestra propia maquina (localhost), si hubiesemos desplegado los modelos en un servidor el comando seria igual pero sustituyendo localhost por la ip del mismo*
 
+
+
+
+## Bonus: Subir una imagen custom a Dockerhub
+
+Primero hay que crearse una cuenta en [dockerhub](https://hub.docker.com/) y crear un repositorio vacion.
+
+Luego abrimos una terminal y nos logeamos: 
+```{bash}
+docker login
+```
+
+Despues de haber modifiado alguna imagen docker, ejecutamos el siguiente comando : 
+
+```{bash}
+docker images
+```
+Para encontrar el image_id asociado a esa imagen.
+
+Y luego : 
+
+```{bash}
+docker tag <image_id> yourhubusername/yourrepo:tag
+docker push yourhubusername/yourrepo:tag
+```
+
+
+Hecho!
+
+
+
+
