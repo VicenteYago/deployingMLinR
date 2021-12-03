@@ -2,7 +2,7 @@ FROM rocker/tidyverse:latest
 
 
 #    R Package Manager fix  https://github.com/rocker-org/rocker-versioned2/issues/301#issuecomment-984679756
-RUN echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' >> ${R_HOME}/etc/Rprofile.site
+#RUN echo 'options(repos = c(CRAN = "https://cloud.r-project.org"))' >> ${R_HOME}/etc/Rprofile.site
 
 
 # OPENCPU ---> https://opencpu.github.io/server-manual/opencpu-server.pdf
