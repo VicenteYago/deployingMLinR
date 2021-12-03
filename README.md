@@ -134,7 +134,7 @@ curl http://localhost:80/ocpu/library/dummyML/R/getPred.ranger.pima/json?auto_un
 
 
 
-## Bonus: Ssubir una imagen modifica a un repositorio
+## Bonus: Subir una imagen custom a Dockerhub
 
 Primero hay que crearse una cuenta en [dockerhub](https://hub.docker.com/) y crear un repositorio vacion.
 
