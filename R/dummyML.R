@@ -10,3 +10,5 @@ NULL
 #> NULL
 
 
+# Para hacer que funcionen links e hipervinculos:
+# devtools::document(".")

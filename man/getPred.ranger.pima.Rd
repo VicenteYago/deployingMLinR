@@ -30,7 +30,7 @@ getPred.ranger.pima(
 
 \item{pedigree}{Numeric, diabetes pedigree function}
 
-\item{age}{Numeric, age (yers)}
+\item{age}{Numeric, age (years)}
 }
 \value{
 Logical: True si diabetico, Falso si no.

@@ -18,6 +18,11 @@
 #' @seealso \code{\link{getPred.lm.boston}}
 #' @author Yago
 #' \email{josevicente.yago@@um.es}
+#' @import tidymodels
+#' @import workflows
+#' @import tune
+#' @import mlbench
+#' @export
 getPred.ranger.pima <- function(pregnant, glucose, pressure, triceps, insulin, mass, pedigree, age) {
 
   loadModel <- function(model.name) {

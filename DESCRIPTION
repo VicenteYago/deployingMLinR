@@ -4,11 +4,22 @@ Title: dummyML models for deploy
 Version: 0.1.0
 Author: Yago
 Maintainer: The package maintainer <josevicente.yago@um.es>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Paquete para despliegue modelos ML con openCPU
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports:
-  jsonlite
+  jsonlite,
+  mlbench,
+  tidymodels,
+  tidyverse,
+  tune,
+  workflows,
+  tibble,
+  ranger
+Depends: 
+ R (>= 3.5.0)
 RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

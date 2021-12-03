@@ -11,6 +11,7 @@
 #' @seealso \code{\link{getPred.ranger.pima}}
 #' @author Yago
 #' \email{josevicente.yago@@um.es}
+#' @export
 getPred.lm.boston <- function(lstat, age){
 
   lm.fit <- loadModel(model.name = "lm-boston.RDS")
